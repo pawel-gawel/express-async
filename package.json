@@ -1,0 +1,18 @@
+{
+  "name": "express-async",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "DEBUG=express:* nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
