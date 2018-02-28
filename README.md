@@ -1,14 +1,18 @@
 ## Express Async
 
-Example how to run Express with async routes + wrapper for async functions so you wolud not have to put everything in try/catch block.
+Experimenting with async functions and generators used as middleware with Express.
 
-### Run
+## Run project
 
 ```
 npm i
-npm run dev
+npm start
 ```
 
-### Async route callbacks
+## Route callbacks
 
-One can actually pass it to express as-is, but could also wrap it with `async-wrapper` for easy error handling (see `async-routes.js`)
+### Async-based
+
+Example how to run Express with async routes + wrapper for async functions so you wolud not have to put everything in try/catch block.
+
+One can actually pass it to express as-is, but could also wrap it with dedicated wrapper for easy error handling (see `async/routes.js` and `async/wrapper.js`)

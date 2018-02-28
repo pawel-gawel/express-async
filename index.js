@@ -1,5 +1,5 @@
-const asyncRoutes = require('./async-routes')
-const generatorRoutes = require('./generator-routes')
+const asyncRoutes = require('./async/routes')
+const generatorRoutes = require('./generator/routes')
 const package = require('./package')
 
 const app = require('express')()
