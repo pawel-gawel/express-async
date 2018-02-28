@@ -3,10 +3,10 @@ module.exports = {
   willThrowAsyncError
 }
 
-function getAsyncData() {
+function getAsyncData(data) {
   return new Promise((resolve, reject) => {  
     setTimeout(() => {       
-      resolve("resolved value"); 
+      resolve("resolved value: " + data); 
     }, 1000)
   })
 }

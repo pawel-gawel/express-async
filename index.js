@@ -1,8 +1,11 @@
-const routes = require('./routes')
+const asyncRoutes = require('./async-routes')
+const generatorRoutes = require('./generator-routes')
 
 const app = require('express')()
-app.use(routes)
+app.use(asyncRoutes)
+app.use(generatorRoutes)
 
 app.listen(8000, () => {
   console.log('it listens')
+  
 })
