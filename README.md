@@ -8,3 +8,7 @@ Example how to run Express with async routes + wrapper for async functions so yo
 npm i
 npm run dev
 ```
+
+### Async route callbacks
+
+One can actually pass it to express as-is, but could also wrap it with `async-wrapper` for easy error handling (see `async-routes.js`)
