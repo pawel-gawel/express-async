@@ -1,15 +1,19 @@
 module.exports = generatorWrapper
 
-
-
 function generatorWrapper(fn) {
+  let recursive = (gen, v) => {
+    let n = gen.next(v).value
+    if (n instanceof Promise) {
+      n.then(v => recursive(gen, v)).catch(console.log)
+    }
+  }
+
   return (req, res) => {
-    let gen = fn(req, res)
+    try {
+      recursive(fn(req, res))
+    } catch(e) {
+      console.log(e)
+    }
 
-    let n = gen.next().value
-    n.then(v => gen.next(v))
-    
-
-   // n.then(console.log)
   }
 }
