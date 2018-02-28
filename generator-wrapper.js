@@ -1,10 +1,16 @@
 module.exports = generatorWrapper
 
 function generatorWrapper(fn) {
-  let recursive = (gen, v) => {
-    let n = gen.next(v).value
-    if (n instanceof Promise) {
-      n.then(v => recursive(gen, v)).catch(console.log)
+  let recursive = (gen, lastValue) => {
+    let { value, done } = gen.next(lastValue)
+    if (done && value === undefined) { 
+      return
+    } else if (value instanceof Promise) {
+      value
+        .then(v => recursive(gen, v))
+        .catch(e => console.log('error in generatorWrapper promise', e))
+    } else {
+        recursive(gen, value)
     }
   }
 
@@ -12,7 +18,7 @@ function generatorWrapper(fn) {
     try {
       recursive(fn(req, res))
     } catch(e) {
-      console.log(e)
+      console.log('error cought in generatorWrapper', e)
     }
 
   }
