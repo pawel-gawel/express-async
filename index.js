@@ -11,6 +11,6 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(process.env.npm_package_config_port, () => {
-  console.log('listening on ', process.env.PORT || package.config.port)
+  console.log('listening on %s...', process.env.PORT || package.config.port)
   
 })
