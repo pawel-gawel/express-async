@@ -1,4 +1,4 @@
-## Express Async
+# Express Async
 
 Experimenting with async functions and generators used as middleware with Express.
 
