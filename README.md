@@ -5,8 +5,7 @@ Experimenting with async functions and generators used as middleware with Expres
 ## Run project
 
 ```
-npm i
-npm start
+npm i && npm start
 ```
 
 ## Route callbacks
