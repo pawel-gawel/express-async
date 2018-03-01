@@ -19,6 +19,14 @@ npm i && npm start
 
 ### Async-based
 
-Example how to run Express with async routes + wrapper for async functions so you wolud not have to put everything in try/catch block.
+Example how to run Express with async routes + wrapper for async functions so you would not have to put route callback code in try/catch block.
 
-One can actually pass it to express as-is, but could also wrap it with dedicated wrapper for easy error handling (see `async/routes.js` and `async/wrapper.js`)
+One can actually pass it to express as-is, but could also wrap it with dedicated wrapper for easy error handling.
+
+See [/async](/async)
+
+### Generator-based
+
+Implements wrapper for generator functions; it teaches generators how to yield promises. This way wrapper acting as a coroutine feeds generator with resolved result of yielded promise.
+
+See [/generator](/generator)
