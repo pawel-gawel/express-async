@@ -11,7 +11,7 @@ app.use((err, req, res, next) => {
   res.send("There was an error: " + err.message)
 })
 
-app.listen(process.env.npm_package_config_port, () => {
-  console.log('listening on %s...', process.env.PORT || require('./package').config.port)
-  
+let port = process.env.PORT || require('./package').config.port
+app.listen(port, () => {
+  console.log('listening on %s...', port)
 })
