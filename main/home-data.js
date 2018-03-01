@@ -5,7 +5,5 @@ const { markdown } = require('markdown')
 module.exports = getHomeData
 
 async function getHomeData() {
-  return `${markdown.toHTML(await promisedFileContents('./README.md'))}
-
-  `
+  return markdown.toHTML(await promisedFileContents('./README.md'))
 }
