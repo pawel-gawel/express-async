@@ -8,7 +8,7 @@ app.use(asyncRoutes)
 app.use(generatorRoutes)
 
 app.use((err, req, res, next) => {
-  res.send("There was an error: " + err.message)
+  res.send("There was an error: " + err)
 })
 
 let port = process.env.PORT || require('./package').config.port

@@ -6,7 +6,7 @@ module.exports = {
 function getAsyncData(data) {
   return new Promise((resolve, reject) => {  
     setTimeout(() => {       
-      resolve("resolved value: " + data); 
+      resolve(data); 
     }, 1000)
   })
 }
