@@ -8,6 +8,13 @@ Experimenting with async functions and generators used as middleware with Expres
 npm i && npm start
 ```
 
+### Navigate through examples
+
+* Async-based data resolving - [/async](/async)
+* Async-based error handling - [/async-error](/async-error)
+* Generator-based data resolving - [/generator](/generator)
+* Generator-based error handling - [/generator-error](/generator-error)
+
 ## Route callbacks
 
 ### Async-based
