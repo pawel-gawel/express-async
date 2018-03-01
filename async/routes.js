@@ -1,11 +1,12 @@
-const wrapper = require('./wrapper')
+const wrap = require('./wrapper')
 const { getAsyncData, willThrowAsyncError } = require('../async-data')
 const { promisedFileContents } = require('../utils')
+
 const path = require('path')
 const express = require('express')
 const router = express.Router()
 
-router.get('/async', wrapper(async (req, res, next) => {
+router.get('/async', wrap(async (req, res, next) => {
   let wrapperPath = path.join(__dirname, 'wrapper.js')
   let contents = await Promise.all([ 
     promisedFileContents(__filename),
@@ -20,7 +21,7 @@ router.get('/async', wrapper(async (req, res, next) => {
   `)
 }))
 
-router.get('/async-error', wrapper(async (req, res, next) => {
+router.get('/async-error', wrap(async (req, res, next) => {
   await willThrowAsyncError()
 }))
 
